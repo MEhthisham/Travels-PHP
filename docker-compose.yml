@@ -1,17 +1,16 @@
-version: '3'
+version: '3.8'
 services:
   php:
-    build: .
+    build: ./var/www/html
     ports:
       - "80:80"
+    links:
+      - db
   db:
-    image: mysql:5.7
+    build: ./database/tms.sql /docker-entrypoint-initdb.d/
     environment:
       MYSQL_DATABASE: tms
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
-    volumes:
-      - db-data:/var/lib/mysql
-volumes:
-  db-data:
+      

@@ -1,0 +1,9 @@
+my-helm-chart/
+├── Chart.yaml
+├── values.yaml
+└── templates/
+    ├── deployment.yaml
+    ├── statefulset.yaml
+    ├── service.yaml
+    ├── ingress.yaml
+    └── pv-pvc.yaml
