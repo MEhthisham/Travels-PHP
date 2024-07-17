@@ -25,7 +25,7 @@
 #### **Implementation Steps**
 
 1. **Download the Project Code**: 
-   - Download the project code from the provided link.
+   - Download the project code
 
 2. **Dockerize the Application**:
    - **Create Dockerfiles for both the PHP application and the database**:
