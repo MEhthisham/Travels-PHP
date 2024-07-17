@@ -1,0 +1,17 @@
+version: '3'
+services:
+  php:
+    build: .
+    ports:
+      - "80:80"
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: tms
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+volumes:
+  db-data:

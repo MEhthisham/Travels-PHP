@@ -1,0 +1,7 @@
+# Use the official MySQL image
+FROM mysql:5.7
+# Set environment variables for database configuration
+ENV MYSQL_DATABASE=tms
+ENV MYSQL_ROOT_PASSWORD=root
+# Copy the database initialization script
+COPY ./database/tms.sql /docker-entrypoint-initdb.d/
